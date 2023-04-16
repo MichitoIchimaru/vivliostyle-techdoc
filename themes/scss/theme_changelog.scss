@@ -1,0 +1,43 @@
+@import 'theme_common';
+
+.changelogtitle::before {
+  content: '';
+}
+
+.changelogtitle {
+  font-size: 20pt;
+  border: 0;
+  background: #ffffff;
+  color: #000000;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #cccccc;
+}
+
+th,
+td {
+  border: 1px solid #555555;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background: #efefef;
+}
+
+th:nth-child(1) {
+  width: 40px;
+}
+
+th:nth-child(2) {
+  width: 100px;
+}
+
+th:nth-child(3) {
+  width: 160px;
+}

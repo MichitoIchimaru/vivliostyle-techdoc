@@ -1,0 +1,90 @@
+body>section {
+  margin: 10px auto;
+}
+
+html {
+  // counter
+  counter-reset: section subsection figure;
+}
+
+section> {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 0;
+    font-weight: bold;
+    break-after: avoid;
+  }
+
+  h1 {
+    margin: 0;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 16pt;
+    line-height: 1.5;
+
+    // counter
+    counter-reset: section;
+
+    &:before {
+      content: counter(chapter) '. ';
+    }
+
+    height: 35px;
+    border-radius: 10px;
+    color: #ffffff;
+    background: #0052D4;
+    background-image: linear-gradient(90deg, rgba(0, 1, 107, 1) 34%, rgba(8, 25, 141, 1) 60%, rgba(35, 102, 247, 1));
+  }
+
+  h2 {
+    margin: 8pt auto 4pt;
+    padding-top: 2px;
+    font-size: 12pt;
+
+    border-left: 10px solid #555555;
+    padding-left: 10px;
+    background-color: #cccccc;
+
+    // counter
+    counter-reset: subsection;
+    counter-increment: section;
+
+    &:before {
+      content: counter(chapter) '.' counter(section) '. ';
+    }
+  }
+
+  h3 {
+    margin: 8pt auto 4pt;
+    padding-top: 2px;
+    font-size: 12pt;
+
+    border-left: 10px solid #555555;
+    padding-left: 10px;
+    background-color: #cccccc;
+
+    // counter
+    counter-increment: subsection;
+
+    &:before {
+      content: counter(chapter) '.' counter(section) '.' counter(subsection) '. ';
+    }
+  }
+}
+
+section.title {
+  color: $color--red;
+}
+
+blockquote>h1 {
+  font-size: inherit;
+}
+
+.level1 {}
+
+.level2 {}

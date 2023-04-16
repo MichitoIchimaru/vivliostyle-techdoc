@@ -1,0 +1,18 @@
+@import 'theme_common';
+
+@page {
+  @bottom-center {
+    content: '';
+  }
+}
+
+.covertitle::before {
+  content: '';
+}
+
+.covertitle {
+  font-size: 24pt;
+  border: 0;
+  background: #ffffff;
+  color: #000000;
+}

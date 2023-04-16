@@ -1,0 +1,63 @@
+@import 'theme_common';
+
+.toctitle::before {
+  content: '';
+}
+
+.toctitle {
+  font-size: 20pt;
+  border: 0;
+  background: #ffffff;
+  color: #000000;
+}
+
+nav {
+  font-size: 12pt;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+ol {
+  list-style: none;
+  padding-left: 0px;
+  counter-reset: item;
+}
+
+nav li {
+  display: table;
+  white-space: nowrap;
+  counter-increment: item;
+  width: 100%;
+}
+
+nav li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  width: 0px;
+  padding-right: 10px;
+}
+
+nav li a {
+  display: inline-flex;
+  width: 100%;
+  text-decoration: none;
+  color: currentColor;
+  align-items: baseline;
+}
+
+nav li a::before {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  border-bottom: 1px dotted;
+  content: "";
+  order: 1;
+  flex: auto;
+}
+
+nav li a::after {
+  text-align: right;
+  content: target-counter(attr(href), page);
+  align-self: flex-end;
+  flex: none;
+  order: 2;
+}

@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/*
+ * For all media (print, screen)
+ */
+/* you can import partial SCSS files */
+/* @import '_variables'; */
+/* @import '_toc'; */
+/* ... */
+@import 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css';
+html {
+  orphans: 1;
+  widows: 1;
+  font-family: sans-serif;
+  font-size: 11pt;
+}
+
+title {
+  string-set: doc-title content();
+}
+
+@page {
+  size: A4;
+  margin: 15mm;
+}
+@page {
+  @bottom-left {
+    content: "社外秘";
+  }
+  @bottom-center {
+    content: counter(page);
+  }
+  @bottom-right {
+    content: "Copyright 2023 XXX LIMITED";
+  }
+}
+code {
+  background-color: #f6f6f6;
+}
+
+figure[class^=language-] {
+  margin: 0.5em 0;
+}
+figure[class^=language-] figcaption {
+  background-color: #e6e6e6;
+}
+figure[class^=language-] pre {
+  margin: 0pt;
+}
+
+.footnote-ref sup {
+  background-color: #ff8989;
+}
+
+.footnote-back {
+  background-color: #ff8989;
+}
+
+.footnotes {
+  font-size: 8pt;
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+  text-indent: 0em;
+}
+p:first-of-type {
+  text-indent: 0;
+}
+:root:lang(ja) p {
+  text-indent: 0em;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure figcaption {
+  text-align: center;
+  counter-increment: figure;
+}
+figure figcaption:before {
+  margin-right: 1rem;
+  content: "Figure" counter(chapter) "-" counter(figure) ".";
+}
+:root:lang(ja) figure figcaption:before {
+  content: "図" counter(chapter) "-" counter(figure) ".";
+}
+
+.custom {
+  color: #de3e3e;
+}
+
+ruby rt {
+  color: #de3e3e;
+}
+
+body > section {
+  margin: 10px auto;
+}
+
+html {
+  counter-reset: section subsection figure;
+}
+
+section > h1,
+section > h2,
+section > h3,
+section > h4,
+section > h5,
+section > h6 {
+  padding: 0;
+  font-weight: bold;
+  break-after: avoid;
+}
+section > h1 {
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 16pt;
+  line-height: 1.5;
+  counter-reset: section;
+  height: 35px;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #0052D4;
+  background-image: linear-gradient(90deg, rgb(0, 1, 107) 34%, rgb(8, 25, 141) 60%, rgb(35, 102, 247));
+}
+section > h1:before {
+  content: counter(chapter) ". ";
+}
+section > h2 {
+  margin: 8pt auto 4pt;
+  padding-top: 2px;
+  font-size: 12pt;
+  border-left: 10px solid #555555;
+  padding-left: 10px;
+  background-color: #cccccc;
+  counter-reset: subsection;
+  counter-increment: section;
+}
+section > h2:before {
+  content: counter(chapter) "." counter(section) ". ";
+}
+section > h3 {
+  margin: 8pt auto 4pt;
+  padding-top: 2px;
+  font-size: 12pt;
+  border-left: 10px solid #555555;
+  padding-left: 10px;
+  background-color: #cccccc;
+  counter-increment: subsection;
+}
+section > h3:before {
+  content: counter(chapter) "." counter(section) "." counter(subsection) ". ";
+}
+
+section.title {
+  color: #de3e3e;
+}
+
+blockquote > h1 {
+  font-size: inherit;
+}
+
+/* and more... 🖋 */
+@page :first {
+  counter-reset: chapter -3;
+}
+@page :nth(1) {
+  counter-increment: chapter;
+}
+@page {
+  @bottom-center {
+    content: "";
+  }
+}
+.covertitle::before {
+  content: "";
+}
+
+.covertitle {
+  font-size: 24pt;
+  border: 0;
+  background: #ffffff;
+  color: #000000;
+}
+
+/*# sourceMappingURL=theme_cover.css.map */

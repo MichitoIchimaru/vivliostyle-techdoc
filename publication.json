@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://www.w3.org/ns/pub-context"
+  ],
+  "type": "Book",
+  "conformsTo": "https://github.com/vivliostyle/vivliostyle-cli",
+  "author": "Michito Ichimaru <michito.ichimaru@gmail.com>",
+  "inLanguage": "ja",
+  "dateModified": "2023-04-15T05:55:42.790Z",
+  "name": "DesignSpecification",
+  "readingOrder": [
+    {
+      "url": "manuscripts/cover.html",
+      "name": "Technical Documentation Sample",
+      "rel": "contents",
+      "type": "LinkedResource"
+    },
+    {
+      "url": "manuscripts/changelog.html",
+      "name": "改版履歴",
+      "rel": "contents",
+      "type": "LinkedResource"
+    },
+    {
+      "url": "manuscripts/toc.html",
+      "name": "目次",
+      "rel": "contents",
+      "type": "LinkedResource"
+    },
+    {
+      "url": "manuscripts/contents/chapter1.html",
+      "name": "構成"
+    },
+    {
+      "url": "manuscripts/contents/chapter2.html",
+      "name": "各ページ詳細"
+    },
+    {
+      "url": "manuscripts/contents/chapter3.html",
+      "name": "段組み"
+    },
+    {
+      "url": "manuscripts/contents/chapter4.html",
+      "name": "Mermaid"
+    }
+  ],
+  "resources": [],
+  "links": []
+}

@@ -1,0 +1,15 @@
+{
+  "name": "techdoc",
+  "description": "Technical Documentation",
+  "version": "0.1.0",
+  "author": "Michito Ichimaru <michito.ichimaru@gmail.com>",
+  "scripts": {
+    "build": "vivliostyle build",
+    "preview": "vivliostyle preview"
+  },
+  "dependencies": {
+    "@vivliostyle/cli": "latest"
+  },
+  "license": "MIT",
+  "private": true
+}

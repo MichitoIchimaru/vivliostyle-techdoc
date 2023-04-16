@@ -1,0 +1,46 @@
+/*
+ * For browser viewing:
+ * load this style in Web publications (format: webpub)
+ */
+
+/* common styles */
+@import 'theme_common';
+
+@page {
+
+  /* if you open the publication on Vivliostyle Viewer, this message will be shown */
+  @top-left {
+    content: 'Technical Documentation Sample 1.0版';
+  }
+}
+
+/* for wide screen */
+body {
+  max-width: 800px;
+  margin: 0rem auto 2rem;
+}
+
+/* highlight footnote */
+.footnote {
+  vertical-align: super;
+  background-color: aliceblue;
+  color: gray;
+
+  a {
+    word-break: break-all;
+  }
+}
+
+/* and more... 🖋 */
+pre[class^="language"] {
+  font-size: 9pt;
+  line-height: 1.2;
+}
+
+section:has(> .column2) {
+  column-count: 2;
+}
+
+section:has(> .column2) h2 {
+  margin-top: 0px;
+}
